@@ -95,7 +95,7 @@ This project is an Pantry Tracker specifically designed for food items, develope
 
 ## Live Demo
 
-Check out the live demo deployed on Vercel: [\[Click Here!\]](https://pantry-tracker-ashy-six.vercel.app/)
+Check out the live demo deployed on Vercel: [\[Click Here!\]](https://pantry-tracker-pi-seven.vercel.app)
 
 
 ## Getting Started
@@ -105,7 +105,7 @@ To get a local copy up and running, follow these steps:
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/aishwaryamensinkai/Pantry-Tracker.git
+git clone https://github.com/VeedhiBhanushali/pantry-tracker.git
 ```
 
 2. Navigate to the project directory:
@@ -244,15 +244,4 @@ The file structure is
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-# pantry-tracker
-# pantry-tracker
-# pantry-tracker
-# pantry-tracker
-# pantry-tracker
-# pantry-tracker
-# pantry-tracker
-# pantry-tracker
-# Projects
-# Projects
-# Projects
-# Projects
+

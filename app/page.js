@@ -143,8 +143,7 @@ const Home = () => {
               <div>
                 <h3 className=" text-emerald text-lg font-semibold mb-4">Contact</h3>
                 <ul className="space-y-3">
-                  <li className="text-gray-400">support@pantrytracker.com</li>
-                  <li className="text-gray-400">1-800-PANTRY</li>
+                  <li className="text-gray-400">bhanushaliveedhi@gmail.com</li>
                 </ul>
               </div>
               <div>

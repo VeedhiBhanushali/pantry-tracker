@@ -150,7 +150,7 @@ const Home = () => {
                 <h3 className="text-lg font-semibold mb-4">Follow Me</h3>
                 <div className="flex space-x-4">
                   {/* Add social media icons here */}
-                  <li><a href="https://www.linkedin.com/in/veedhibhanushali/" className="text-gray-400 hover:text-white transition-colors">LinkedIn</a></li><br>
+                  <li><a href="https://www.linkedin.com/in/veedhibhanushali/" className="text-gray-400 hover:text-white transition-colors">LinkedIn</a></li>
                   <li><a href="https://veedhibhanushali.com" className="text-gray-400 hover:text-white transition-colors">Website</a></li>
                 </div>
               </div>

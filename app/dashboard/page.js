@@ -142,7 +142,7 @@ const Dashboard = () => {
   );
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-sage-50 via-mint-50 to-cream-50">
+    <div className="min-h-screen bg-cream-50">
       <Navbar user={user} />
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 mt-16">
         {/* Dashboard Header */}
@@ -183,7 +183,7 @@ const Dashboard = () => {
         <div className="bg-white/80 backdrop-blur-sm rounded-xl shadow-lg mb-8 overflow-hidden">
           <div className="overflow-x-auto">
             <table className="w-full text-left">
-              <thead className="bg-gradient-to-r from-sage-100 to-mint-100">
+              <thead className="bg-sage-100">
                 <tr>
                   <th className="px-6 py-4 text-mint-800">Image</th>
                   <th className="px-6 py-4 text-mint-800">Name</th>

@@ -2,13 +2,14 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { getAuth } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { useRouter } from "next/navigation";
 import { app } from "./firebase/config";
 import Navbar from "./components/Navbar";
 import { ToastContainer } from "react-toastify";
 import Image from 'next/image';
 import { FaShoppingBasket, FaBell, FaChartPie, FaMobileAlt, FaUtensils, FaClipboardList } from 'react-icons/fa';
+import { toast } from "react-hot-toast";
 
 const Home = () => {
   const [user, setUser] = useState(null);
@@ -26,6 +27,21 @@ const Home = () => {
     });
     return () => unsubscribe();
   }, [router]);
+
+  const signInWithGoogle = async () => {
+    try {
+      const auth = getAuth(app);
+      const provider = new GoogleAuthProvider();
+      const result = await signInWithPopup(auth, provider);
+      if (result.user) {
+        toast.success("Successfully signed in!");
+        router.push("/dashboard");
+      }
+    } catch (error) {
+      console.error("Error signing in:", error);
+      toast.error("Failed to sign in. Please try again.");
+    }
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-sage-50 via-cream-50 to-mint-50">
@@ -46,7 +62,7 @@ const Home = () => {
               </p>
               <div className="flex justify-center gap-6">
                 <button 
-                  onClick={() => router.push('/signup')}
+                  onClick={signInWithGoogle}
                   className="bg-sage-600 hover:bg-sage-700 text-white font-semibold 
                     py-5 px-10 rounded-lg text-lg transform transition duration-200 
                     hover:scale-105 shadow-lg min-w-[200px]"
@@ -143,20 +159,19 @@ const Home = () => {
               <div>
                 <h3 className=" text-emerald text-lg font-semibold mb-4">Contact</h3>
                 <ul className="space-y-3">
-                  <li className="text-gray-400">bhanushaliveedhi@gmail.com</li>
+                  <li className="text-gray-400">support@pantrytracker.com</li>
+                  <li className="text-gray-400">1-800-PANTRY</li>
                 </ul>
               </div>
               <div>
                 <h3 className="text-lg font-semibold mb-4">Follow Me</h3>
                 <div className="flex space-x-4">
                   {/* Add social media icons here */}
-                  <li><a href="https://www.linkedin.com/in/veedhibhanushali/" className="text-gray-400 hover:text-white transition-colors">LinkedIn</a></li>
-                  <li><a href="https://veedhibhanushali.com" className="text-gray-400 hover:text-white transition-colors">Website</a></li>
                 </div>
               </div>
             </div>
             <div className="mt-12 pt-8 border-t border-gray-800 text-center text-gray-400">
-              <p>© 2023 Pantry Tracker by <a href="https://veedhibhanushali.com">Veedhi Bhanushali</a> </p>
+              <p>© 2023 Pantry Tracker by <a li="https://veedhibhanushali.com">Veedhi Bhanushali</a> </p>
             </div>
           </div>
         </footer>
